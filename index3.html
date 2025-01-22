@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Left Nav Bar</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+    }
+
+    .navbar {
+        background: linear-gradient(to right, black, #2f0200, black); /* Gradient from black to red and back to black */
+        color: white; /* Ensures text remains visible */
+    }
+    .navbar-brand {
+      color: #ff0000; /* Red for brand text */
+      font-weight: bold;
+    }
+    .navbar-brand:hover {
+      color: #ff4d4d; /* Lighter red on hover */
+    }
+    .nav-link {
+      color: #ffffff; /* White links */
+      font-size: 13px;
+    }
+    .nav-link:hover {
+      color: #dcdcdc; /* Light gray on hover */
+    }
+    .btn-login {
+      background-color: #ff0000;
+      color: #ffffff;
+      border: none;
+      padding: 5px 10px;
+      font-size: 13px;
+      border-radius: 8px;
+
+    }
+
+   
+    .btn-signup {
+      background-color: transparent;
+      color: #ffffff;
+      border: none;
+      padding: 5px 10px;
+      font-size: 13px;
+
+
+    }
+    .btn-login:hover,
+    .btn-signup:hover {
+      background-color: #cc0000;
+      border-radius: 8px;
+
+    }
+    .left-navbar {
+      height: 100vh;
+      background-color: #000000; /* Black background */
+      color: #ffffff;
+      position: fixed;
+      width: 40px;
+    }
+    .left-navbar .nav-link {
+      color: #ffffff;
+      text-align: center;
+      padding: 5px 0;
+    }
+    .left-navbar .nav-link.active {
+      color: #ff0000; /* Red background for active icon */
+      border-radius: 5px;
+    }
+    .left-navbar .nav-link:hover {
+      color: #ff4d4d; /* Lighter red on hover */
+    }
+    .icon {
+      font-size: 18px;
+    }
+
+    .hero-section {
+        background-color: #000000; /* Fallback color */
+        background: url('back.jpg') no-repeat left center; /* Default to left */
+        background-size: cover; /* Ensures the image covers the container */
+        background-position: right center; /* Slides the image to the right */
+        height: 40vh;
+        display: flex;
+        align-items: center;
+    }
+
+  .hero-title {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: #ea0a0a;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+
+  .hero-subtitle {
+    font-size: 2.4rem;
+    font-weight: 500;
+    margin-bottom: 30px;
+  }
+
+  @media (max-width: 600px) {
+  .hero-title {
+    font-size: 1.8rem; /* Reduce font size */
+  }
+
+  .hero-subtitle {
+    font-size: 2rem; /* Reduce font size */
+  }
+}
+
+/* Media query for screens less than 500px */
+@media (max-width: 500px) {
+  .hero-title {
+    font-size: 1.6rem; /* Further reduce font size */
+  }
+
+  .hero-subtitle {
+    font-size: 1.8rem; /* Further reduce font size */
+  }
+}
+
+/* Media query for screens less than 400px */
+@media (max-width: 400px) {
+  .hero-title {
+    font-size: 1.4rem; /* Further reduce font size */
+  }
+
+  .hero-subtitle {
+    font-size: 1.6rem; /* Further reduce font size */
+  }
+}
+
+  .highlight {
+    color: #ffffff;
+    font-weight: bold;
+  }
+
+  .btn-signup1 {
+    background-color: #ea0a0a;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+
+  .btn-signup1:hover {
+    background-color: #cc0000;
+  }
+
+  .terms-text {
+    font-size: 0.7rem;
+    color: #515151;
+    margin-top: 10px;
+  }
+
+  .partner-logo {
+    max-width: 143px;
+    object-fit: contain;
+  }
+
+  .promo-image {
+    max-width: 300px;
+  }
+
+  .btn-category {
+    background-color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 120px;
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .btn-category:hover {
+    transform: scale(1.05);
+  }
+
+  .category-icon {
+    max-height: 100px;
+    margin-bottom: 10px;
+  }
+
+
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><img src="https://bet138.net/wp-content/uploads/2024/08/bet138-logo.png" alt="Logo" height="30" /></a>
+    
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-0 ms-lg-5 me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link me-3" href="#">Casino</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link me-3" href="#">Sports</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link me-3" href="#">Slots</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Hold 'em</a>
+              </li>
+            </ul>
+            <div class="d-flex" style="margin-right: 200px;">
+              <button class="btn btn-login me-2 px-4" type="button">Login</button>
+              <button class="btn btn-signup" type="button">Sign Up</button>
+            </div>
+          </div>
+        </div>
+</nav>
+<div class="left-navbar d-flex flex-column">
+    <a href="#" class="nav-link active">
+      <i class="fas fa-home icon"></i>
+    </a>
+    <a href="#" class="nav-link">
+      <i class="fas fa-user icon"></i>
+    </a>
+    <a href="#" class="nav-link">
+      <i class="fas fa-spades icon"></i>
+    </a>
+    <a href="#" class="nav-link">
+      <i class="fas fa-gamepad icon"></i>
+    </a>
+    <a href="#" class="nav-link">
+      <i class="fas fa-football-ball icon"></i>
+    </a>
+    <a href="#" class="nav-link">
+      <i class="fas fa-crown icon"></i>
+    </a>
+    <a href="#" class="nav-link">
+      <i class="fas fa-gift icon"></i>
+    </a>
+    <a href="#" class="nav-link">
+      <i class="fas fa-trophy icon"></i>
+    </a>
+    <a href="#" class="nav-link">
+      <i class="fas fa-calendar-alt icon"></i>
+    </a>
+    <a href="#" class="nav-link">
+      <i class="fas fa-star icon"></i>
+    </a>
+    <a href="#" class="nav-link">
+      <i class="fas fa-piggy-bank icon"></i>
+    </a>
+    <a href="#" class="nav-link">
+      <i class="fas fa-handshake icon"></i>
+    </a>
+    <a href="#" class="nav-link">
+      <i class="fas fa-headset icon"></i>
+    </a>
+</div>
+
+<div class="hero-section">
+    <div class="container text-white">
+      <div class="row align-items-center">
+        <div class="col-lg-5 px-5 px-md-4">
+          <h1 class="hero-title">BET ON SPORTS</h1>
+          <h2 class="hero-subtitle">
+            First Deposit Match Up to <span class="highlight">$300</span> in Bonuses!
+          </h2>
+          <button class="btn btn-danger btn-signup1 w-50">SIGN UP</button>
+          <p class="terms-text">
+            For new players only. Maximum bonus equal to the first deposit, up to $1000. 
+            Terms of use apply to 19 years of age or older.
+          </p>
+        </div>
+      </div>
+    </div>
+</div>
+
+<div class="container-fluid py-4" style="background-color: #211c1c;">
+    <!-- First Row: Partner Logos -->
+    <div class="row justify-content-center px-5">
+      <div class="col-auto my-2">
+        <img src="top.png" alt="Partner Logo 1" class="partner-logo">
+      </div>
+      <div class="col-auto my-2">
+        <img src="top.png" alt="Partner Logo 1" class="partner-logo">
+      </div>
+      <div class="col-auto my-2">
+        <img src="top.png" alt="Partner Logo 1" class="partner-logo">
+      </div>
+      <div class="col-auto my-2">
+        <img src="top.png" alt="Partner Logo 1" class="partner-logo">
+      </div>
+      <div class="col-auto my-2">
+        <img src="top.png" alt="Partner Logo 1" class="partner-logo">
+      </div>
+      <div class="col-auto my-2">
+        <img src="top.png" alt="Partner Logo 1" class="partner-logo">
+      </div>
+      <div class="col-auto my-2">
+        <img src="top.png" alt="Partner Logo 1" class="partner-logo">
+      </div>
+      <div class="col-auto my-2">
+        <img src="top.png" alt="Partner Logo 1" class="partner-logo">
+      </div>
+    </div>
+  
+    <!-- Second Row: Promo Banners -->
+    <div class="row text-center my-4 px-5">
+      <div class="col-md-3 col-sm-6 my-2">
+        <img src="middle.png" alt="Promo 1" class="img-fluid">
+      </div>
+      <div class="col-md-3 col-sm-6 my-2">
+        <img src="middle.png" alt="Promo 1" class="img-fluid">
+      </div>
+      <div class="col-md-3 col-sm-6 my-2">
+        <img src="middle.png" alt="Promo 1" class="img-fluid">
+      </div>
+      <div class="col-md-3 col-sm-6 my-2">
+        <img src="middle.png" alt="Promo 1" class="img-fluid">
+      </div>
+    </div>
+  
+    <!-- Third Row: Category Buttons -->
+    <div class="row text-center my-4 px-5">
+      <div class="col-md-3 col-sm-6 my-2 px-4">
+          <img src="bottom.png" alt="Casino" class=" img-fluid">
+      </div>
+      <div class="col-md-3 col-sm-6 my-2 px-4">
+        <img src="bottom.png" alt="Casino" class="img-fluid">
+    </div>
+    <div class="col-md-3 col-sm-6 my-2 px-4">
+        <img src="bottom.png" alt="Casino" class="img-fluid">
+    </div>
+    <div class="col-md-3 col-sm-6 my-2 px-4">
+        <img src="bottom.png" alt="Casino" class="img-fluid">
+    </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap and Font Awesome JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+</body>
+</html>
